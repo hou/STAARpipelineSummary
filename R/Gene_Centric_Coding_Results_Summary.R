@@ -304,7 +304,7 @@ Gene_Centric_Coding_Results_Summary <- function (agds_dir,
       }
     }
     write.csv(disruptive_missense_sig_cond, file = file.path(output_path,
-                                                             glue::glue("{output_prefix}_disruptive_missense_sig_cond.csv"))
+                                                             glue::glue("{output_prefix}_disruptive_missense_sig_cond.csv")))
               coding_sig_cond <- rbind(plof_sig_cond[, c("Gene name",
                                                          "Chr", "Category", "#SNV", "SKAT(1,25)", "Burden(1,1)",
                                                          "ACAT-V(1,25)", "STAAR-O")], missense_sig_cond[,
