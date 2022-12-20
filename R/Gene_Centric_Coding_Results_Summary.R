@@ -92,8 +92,7 @@ Gene_Centric_Coding_Results_Summary <- function (agds_dir,
   results_coding_genome <- c()
   for (kk in 1:gene_centric_coding_jobs_num) {
     print(kk)
-    results_coding <- get(load(paste0(input_path, gene_centric_results_name,
-                                      "_", kk, ".Rdata")))
+    results_coding <- get(load(file.path(input_path, glue::glue("{gene_centric_results_name}_{kk}.Rdata"))))
     results_coding_genome <- c(results_coding_genome, results_coding)
   }
   results_plof_genome <- c()
